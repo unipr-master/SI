@@ -1,0 +1,99 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global/global}
+  \entry{ember}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=AHS}{%
+         family={Anderson},
+         familyi={A\bibinitperiod},
+         given={Hyrum\bibnamedelima S.},
+         giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Roth},
+         familyi={R\bibinitperiod},
+         given={Phil},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AHSRP1}
+    \strng{fullhash}{AHSRP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{eprint}
+    \verb 1804.04637
+    \endverb
+    \field{title}{EMBER: An Open Dataset for Training Static PE Malware Machine
+  Learning Models}
+    \verb{url}
+    \verb https://arxiv.org/abs/1804.04637
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CR}
+    \field{year}{2018}
+  \endentry
+
+  \entry{clingo_api}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{note}{Ultimo accesso: 2 gennaio 2025}
+    \field{title}{Clingo API documentation}
+    \verb{url}
+    \verb https://potassco.org/clingo/python-api/5.4/
+    \endverb
+  \endentry
+
+  \entry{pe}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{note}{Ultimo accesso: 2 gennaio 2025}
+    \field{title}{Formato PE}
+    \verb{url}
+    \verb https://learn.microsoft.com/it-it/windows/win32/debug/pe-format
+    \endverb
+  \endentry
+
+  \entry{lief}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{note}{Ultimo accesso: 2 gennaio 2025}
+    \field{title}{LIEF: Library to Instrument Executable Formats}
+    \verb{url}
+    \verb https://lief.re
+    \endverb
+  \endentry
+
+  \entry{pe_header}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{note}{Ultimo accesso: 2 gennaio 2025}
+    \field{title}{Wikipedia}
+    \verb{url}
+    \verb https://upload.wikimedia.org/wikipedia/commons/1/1b/Portable_Executab
+    \verb le_32_bit_Structure_in_SVG_fixed.svg
+    \endverb
+  \endentry
+\enddatalist
+\endinput

@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+% Package to make citations superscrit with brackets
+\usepackage[italian]{babel} % Imposta la lingua italiana
+\usepackage[backend=bibtex,language=italian]{biblatex}
+\addbibresource{references.bib} 
+
+% Package to change margin size
+\usepackage{anysize}
+\marginsize{2cm}{2cm}{1cm}{2cm}
+% Package to make headers
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+% Package for highligths
+\usepackage{soul}
+% Colors for the references links
+\usepackage[dvipsnames]{xcolor}
+% Package to link references
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=CadetBlue,
+    filecolor=CadetBlue,      
+    urlcolor=CadetBlue,
+}
+% Package for lorem ipsum
+\usepackage{lipsum}
+% Package for multicolumn
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{float}
+% Package for removing paragraph identations
+\usepackage{parskip}
+\setlength\columnsep{18pt}
+% Sets bastract
+\renewenvironment{abstract}
+ {\par\noindent\textbf{\abstractname}\ \ignorespaces \\}
+ {\par\noindent\medskip}
+\usepackage{listings}
+
+\lstset{
+	basicstyle=\ttfamily\footnotesize, 
+	breaklines=true,                   
+	breakatwhitespace=true,            
+	columns=flexible,                  
+	frame=none                
+}
+
+
+ 
+\begin{document}
+% Makes header
+\pagestyle{fancy}
+\thispagestyle{empty}
+\fancyhead[R]{}
+\fancyhead[L]{}
+% Makes footnotes with an asterisk
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\begin{center}
+\Large{\textbf{Domain generation algorithm}}
+\vspace{0.4cm}
+\normalsize
+\\ Alessio Russo \\
+\vspace{0.1cm}
+\textit{Università degli studi di Parma}
+\vspace{0.1cm}
+\medskip
+\normalsize
+\end{center}
+\begin{multicols}{2}
+\input{./sections/1_introduction.tex}
+\end{multicols}
+\printbibliography
+\end{document}
