@@ -1,10 +1,4 @@
-# Introduzione
-
----
-**Indice**
-```table-of-contents
-```
----
+# 1. Introduzione
 
 ## Le principali minacce informatiche
 

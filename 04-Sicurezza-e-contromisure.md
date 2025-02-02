@@ -1,10 +1,5 @@
-# Sicurezza e contromisure
+# 4. Sicurezza e contromisure
 
----
-**Indice**
-```table-of-contents
-```
----
 Durante una sessione OSINT, l'anonimato e la sicurezza sono aspetti fondamentali da considerare. La protezione della propria identità è essenziale per evitare di esporre dati personali o di compromettere l'indagine.
 
 La profilazione è un rischio concreto, poiché esistono numerosi strumenti per raccogliere informazioni su un utente o un sistema. Siti come Panopticlick possono dimostrare quanto sia facile identificare un utente attraverso caratteristiche uniche del browser, dei plugin installati o della configurazione del sistema. Anche il traffico generato durante un'attività OSINT, se abbondante o anomalo, può attirare l'attenzione, risultando sospetto o soggetto ad analisi. Inoltre, bisogna fare attenzione a non rivelare inavvertitamente dati personali, come attraverso post o messaggi non valutati con attenzione.

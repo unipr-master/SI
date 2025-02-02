@@ -1,10 +1,5 @@
-# Strumenti OSINT
+# 3. Strumenti OSINT
 
----
-**Indice**
-```table-of-contents
-```
----
 ## FOCA
 
 I metadati sono informazioni incorporate all'interno di un file, spesso invisibili all'utente durante il normale utilizzo. Sono definiti "data about data" poiché descrivono le caratteristiche del file, come il nome dell'autore, la data di creazione, la versione del software utilizzato per crearlo e altre informazioni tecniche. L'analisi dei metadati può fornire dettagli utili in contesti investigativi o per restringere il campo di indagine.

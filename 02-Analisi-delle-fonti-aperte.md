@@ -1,10 +1,4 @@
-# Analisi delle fonti aperte
-
----
-**Indice**
-```table-of-contents
-```
----
+# 2. Analisi delle fonti aperte
 
 ## Categorie di intelligence
 
