@@ -1,10 +1,42 @@
-\section{Introduzione}
+\section*{Introduzione}
+Un dominio è un identificatore (univoco) utilizzato per accedere a risorse su Internet. 
+In particolare, i domini sono stringhe alfanumeriche strutturate gerarchicamente, 
+tradotte in indirizzi IP attraverso il \textbf{Domain Name System} (DNS).
+\\\\ 
+Ad esempio, il dominio \textit{example.com} è associato a un indirizzo IP che permette ai dispositivi di localizzare il server 
+corrispondente. I domini sono progettati per facilitare la navigazione su Internet e per essere 
+gestibili dagli esseri umani, a differenza degli indirizzi IP numerici. 
+\\\\
+I \textbf{registrar} sono gli enti che permettono la registrazione 
+e la gestione dei domini, mentre i \textbf{name server} sono i server responsabili 
+della risoluzione dei nomi di dominio. Concludiamo poi introducendo i \textbf{record DNS}, 
+delle tuple che contengono le informazioni associate a un dominio, come gli indirizzi IP (record \verb|A| e \verb|AAAA|), 
+i server mail (\verb|MX|) e i riferimenti a server di nomi (\verb|NS|).
 
-%~\ref{fig:pe_header} 
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=\columnwidth]{fig/pe_format.png}
-%	\caption{Struttura di un Portable Executable a 32 bit. Creative commons image courtesy \cite{pe_header}}
-%	\label{fig:pe_header}
-%\end{figure}   
-%\subsection{Alberi decisionali}\label{subsec:decision_tree}
+\subsection*{Classificazione dei domini}
+I domini possono essere classificati secondo diversi criteri.
+\\\\
+In base alla gerarchia del DNS, si dividono in: 
+\begin{itemize}
+    \item \textbf{top-level domains} (TLD) come \verb|.com|, \verb|.net|, \verb|.org|, \verb|.gov|
+    e \verb|.edu|.
+    \item \textbf{second-level domains} (SLD) come \verb|example| in \verb|example.com|.
+    \item \textbf{subdomains} (o \textit{third-level domains}) utili per l'organizzazione 
+    delle risorse, come \verb|blog| in \verb|blog.example.com|.
+\end{itemize} 
+Sulla base dell'accessibilità, si dicono invece:
+\begin{itemize}
+    \item \textbf{generici} (gTLD), registrabili pubblicamente, come \verb|.com|, \verb|.net| e \verb|.info|.
+    \item  \textbf{nazionali} (ccTLD), assegnati a specifiche nazioni, come \verb|.it| per l'Italia o \verb|.fr| per la 
+    Francia.
+    \item \textbf{sponsorizzati} (sTLD), gestiti da specifiche organizzazioni (o settori), come 
+    \verb|.gov| per enti governativi e \verb|.edu| per istituzioni educative.
+    \item \textbf{riservati}, non registrabili pubblicamente, come \verb|.localhost| e \verb|.test|. 
+\end{itemize} 
+Infine, in base allo scopo per cui vengono registrati, si distinguono in:
+\begin{itemize}
+    \item \textbf{legittimi}, registrati e utilizzati per siti web, aziende e servizi autentici.
+    \item \textbf{malevoli}, generati da malware o cybercriminali per attacchi informatici.
+    \item \textbf{parcheggiati}, registrati ma non  utilizzati attivamente, spesso con l'intento di rivenderli o per 
+    protezione del marchio.
+\end{itemize}
