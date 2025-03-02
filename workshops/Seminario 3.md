@@ -1,4 +1,3 @@
-Concetti fondamentali inerenti all'ambito Cybersecurity estratti dalla slide della Barilla.
 
 # Cyber attacchi
 ---

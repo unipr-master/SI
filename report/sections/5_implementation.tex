@@ -1,0 +1,36 @@
+\section*{Implementazione}
+Di seguito è riportato un esempio, in Python, di DGA basato su una 
+funzione pseudo-casuale. L'algoritmo prende come input una data (anno, 
+mese e giorno) e restituisce un nome di dominio generato dinamicamente.
+\\\\
+L'idea alla base di questo codice è quella di creare una 
+sequenza pseudo-casuale di caratteri, in base ai valori 
+della data fornita.
+\\\\
+\begin{lstlisting}
+    def generate_domain(year: int, month: int, day: int) -> str:
+    
+    """Generate a domain name for the given date."""
+    domain = ""
+    
+    for i in range(16):
+        year = ((year ^ 8 * year) >> 11) ^ ((year & 0xFFFFFFF0) << 17)
+        month = ((month ^ 4 * month) >> 25) ^ 16 * (month & 0xFFFFFFF8)
+        day = ((day ^ (day << 13)) >> 19) ^ ((day & 0xFFFFFFFE) << 12)
+        domain += chr(((year ^ month ^ day) % 25) + 97)
+    
+    return domain + ".com"
+\end{lstlisting}
+
+In particolare, ogni iterazione del ciclo modifica i valori di \texttt{year}, 
+\texttt{month} e \texttt{day} utilizzando operazioni bitwise (\texttt{shift}, 
+\texttt{XOR} e \texttt{AND}) per manipolare i valori numerici e trasformarli 
+in caratteri alfabetici.
+
+Poiché il ciclo viene eseguito 16 volte, il risultato finale sarà 
+una stringa di 16 caratteri alfabetici, seguiti dal suffisso \texttt{.com}.
+\\\\
+Ad esempio, l'esecuzione del codice, dando come input il 7 gennaio 2014, 
+produce in output il dominio
+
+\texttt{intgmxdeadnxuyla.com}

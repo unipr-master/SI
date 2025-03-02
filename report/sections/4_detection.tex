@@ -1,0 +1,102 @@
+\section*{Tecniche di rilevamento}
+Il rilevamento dei domini generati tramite DGA prevede diversi 
+approcci
+
+\subsection*{Analisi lessicale e sintattica}
+Uno dei primi metodi utilizzati per identificare i domini generati 
+algoritmicamente è l'analisi delle loro caratteristiche \textbf{lessicali} 
+e \textbf{sintattiche}. Come anticipato, infatti, molti DGA, generano 
+domini privi di significato, spesso caratterizzati da lunghe stringhe 
+alfanumeriche casuali.
+Gli algoritmi di rilevamento basati su questa tecnica esaminano quindi
+parametri come la lunghezza del dominio, la frequenza delle lettere, 
+la presenza di sillabe comuni, l'entropia della stringa 
+e la distribuzione dei caratteri.  
+\\\\
+Ad esempio, un dominio generato da un DGA pseudo-casuale come 
+\verb|axwscwsslmiagfah.com| appare molto diverso da un dominio legittimo 
+come \verb|unipr.it|. Utilizzando metriche statistiche, 
+è spesso possibile classificare un dominio come sospetto. 
+
+\subsection*{Analisi del traffico di rete}  
+Un altro approccio efficace per il rilevamento dei DGA è 
+l'analisi del comportamento del traffico di rete. 
+A differenza dei domini legittimi, che vengono interrogati da un 
+ampio numero di utenti, i domini generati dai malware presentano spesso 
+comportamenti anomali.  
+\\\\
+Un primo indicatore è l'elevata velocità di risoluzione dei DNS. 
+Un dispositivo infetto da malware che utilizza un DGA tenterà di 
+connettersi a centinaia o migliaia di domini in pochi secondi,
+nella speranza di trovare un dominio C2 valido. 
+Questo comportamento è diverso da quello di un utente normale,
+che visita un numero relativamente basso di domini in un 
+determinato periodo di tempo.  
+\\\\
+Inoltre, poiché i domini malevoli tendono a essere attivi 
+per periodi brevi, il monitoraggio della 
+\textbf{longevità dei domini} può quindi diventare un valido 
+indicatore per le attività malevole
+
+\subsection*{Approcci di machine learning} 
+Con l'aumento della complessità dei DGA, le tecniche tradizionali 
+di rilevamento, basate su regole euristiche, si sono dimostrate sempre 
+meno efficaci. Per questo motivo, i sistemi di sicurezza più complessi
+implementano modelli basati sull'apprendimento automatico per individuare pattern 
+ricorrenti nei domini generati. 
+\\\\
+L'apprendimento automatico permette infatti di addestrare modelli 
+su grandi quantità di dati, distinguendo tra domini legittimi e 
+domini generati algoritmicamente. I modelli di classificazione 
+più utilizzati sono basati su reti neurali, alberi decisionali e 
+support vector machines. 
+\\\\
+Un esempio di tecnica basata sul machine learning prevede l'uso 
+di reti neurali convoluzionali per analizzare la struttura dei nomi 
+di dominio e identificare somiglianze con campioni noti di DGA. 
+Inoltre, l'utilizzo di algoritmi di clustering permette di 
+raggruppare i domini con comportamenti simili, evidenziando quelli 
+che potrebbero essere generati automaticamente.  
+
+\section*{Contromisure}
+Oltre al rilevamento dei DGA, esistono diverse strategie di 
+prevenzione che possono ridurre l'impatto di queste minacce 
+e aiutano a proteggere le reti.
+
+\subsection*{Sinkholing}
+Una delle misure più efficaci è il sinkholing, che 
+consiste nel registrare preventivamente i domini 
+generati dagli algoritmi noti e reindirizzare il traffico malevolo
+verso server controllati, anziché verso il server C2 del malware.
+In questo modo, è possibile impededire al malware di ricevere nuovi 
+comandi. 
+\\\\
+Questa tecnica è stata ampiamente utilizzata contro Conficker
+
+\subsection*{Blacklist dinamica}
+Un'altra strategia spesso utilizza è la realizzazione di una 
+blacklist dinamica, che aggiorna periodicamente l'elenco dei domini 
+sospetti, identificati tramite i metodi di rilevamento sopra descritti. 
+Tuttavia, poiché i malware generano continuamente nuovi domini, 
+questo approccio richiede aggiornamenti costanti per rimanere efficace.  
+
+\subsection*{Filtraggio DNS}
+Un metodo più avanzato è il DNS filtering, basato su 
+intelligenza artificiale, che combina tecniche di machine 
+learning e analisi del traffico per identificare in tempo
+reale i domini malevoli. 
+\\\\
+Questi sistemi possono essere implementati a livello di firewall ,
+o direttamente all'interno di sistemi DNS, per bloccare 
+automaticamente le richieste verso domini sospetti.  
+
+\subsection*{Difesa proattiva}
+Infine, è fondamentale adottare strategie di difesa proattiva, 
+come:
+\begin{itemize}
+    \item il \textbf{monitoraggio continuo} del traffico DNS, che permette 
+    di identificare anomalie nel traffico e rispondere
+    tempestivamente a eventuali attacchi.
+    \item la \textbf{segmentazione della rete}, che impedisce ai 
+    malware di propagarsi all'interno della rete.
+\end{itemize}

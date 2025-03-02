@@ -1,0 +1,64 @@
+\section*{DGA nelle botnet e nei malware}
+Le botnet sono reti di dispositivi compromessi, controllati in modo 
+remoto tramite un'infrastruttura C2. Un elemento fondamentale per il "corretto"
+successo di una botnet è la capacità di comunicare con il server C2 
+senza essere intercettata o bloccata. 
+Per questo motivo, i malware moderni utilizzano DGA per generare 
+dinamicamente nomi di dominio difficili da prevedere. 
+Questa strategia ha un duplice vantaggio: da un lato, permette agli 
+attaccanti di registrare solo alcuni dei domini generati, riducendo 
+i costi e la visibilità; dall'altro, rende più difficile per le forze
+dell'ordine e i ricercatori di sicurezza bloccare l'infrastruttura C2.
+
+\subsubsection*{Conficker}
+Uno dei primi (e più noti) esempi di malware che ha impiegato un 
+algoritmo di generazione dei domini è conficker. Scoperto 
+nel 2008, il suo DGA generava ogni giorno circa 250 domini diversi,
+basandosi su un seed condiviso tra tutte le istanze del malware. 
+Questo approccio permetteva al botmaster di registrare, secondo necessità,
+uno di quei domini, e fornire istruzioni ai dispositivi infetti. Successive 
+varianti di Conficker hanno ampliato il numero di domini generati 
+fino a 50.000 al giorno, rendendo più difficile per i sistemi di sicurezza 
+la loro identificazione e il loro blocco. 
+\\\\
+Il principale limite di Conficker era che il suo algoritmo di
+generazione era relativamente semplice, e una volta identificato 
+il metodo di creazione, era possibile prevedere i domini futuri e 
+bloccarli preventivamente.
+
+\subsubsection*{Gameover Zeus}
+Gameover Zeus è stato un altro malware significativo che ha 
+utilizzato DGA per eludere i sistemi di sicurezza. A differenza di 
+Conficker, che generava i domini in modo relativamente semplice, 
+Gameover Zeus impiegava un DGA più sofisticato che combinava fonti 
+di entropia esterne, come i titoli di importanti testate giornalistiche, per 
+generare domini difficili da prevedere. Questo tipo di tecniche rende complessa la 
+creazione di blacklist efficaci, poiché i domini variavano in base a 
+eventi non controllabili.
+
+\subsubsection*{Necurs}
+Necurs è una botnet che ha utilizzato un DGA avanzato per 
+evitare il rilevamento. Questo malware ha introdotto un metodo di 
+generazione basato su un modello statistico, producendo nomi di 
+dominio apparentemente naturali, e quindi più difficili da individuare 
+con filtri euristici (e.g. basati sull'entropia del nome di dominio). 
+\\\\
+Questa botnet è stata una delle più longeve e utilizzate per il malware 
+finanziario, facilitando la diffusione di ransomware come Locky e 
+banking trojan come Dridex.
+
+\subsubsection*{Matsnu e suppobox}
+Questi due malware sono esempi di DGA basati su dizionario. 
+A differenza degli algoritmi pseudo-casuali che generano stringhe 
+alfanumeriche casuali, Matsnu e Suppobox utilizzano 
+parole prese da un dizionario per produrre domini apparentemente autentici. 
+Questo approccio riduce la probabilità che il traffico 
+verso questi domini venga classificato come sospetto, poiché i nomi 
+generati appaiono simili a quelli utilizzati per siti legittimi.
+\\\\
+Uno degli elementi chiave che ha reso questi algoritmi così 
+efficaci nel campo del cybercrimine è la loro capacità di 
+adattarsi ai cambiamenti nei sistemi di difesa. 
+Quando una tecnica viene identificata e bloccata, gli sviluppatori 
+di malware affinano i loro DGA per renderli più sofisticati e 
+resistenti alle contromisure.

@@ -1,0 +1,55 @@
+
+\section*{Algoritmi di generazione}
+Gli algoritmi di generazione di dominio, noti come \textbf{DGA} (Domain Generation Algorithms), 
+sono strumenti automatici per la creazione di domini, sulla base di schemi predefiniti.  
+\\\\
+Originariamente sviluppati per l'utilizzo in applicazioni legittime, 
+come la creazione di indirizzi temporanei o la gestione di servizi distribuiti, 
+questi algoritmi vegono oggi largamente utilizzati dal cybercrimine per
+eludere i sistemi di sicurezza e mantenere attive le comunicazioni tra 
+malware e i server di comando e controllo (C2). 
+\\\\
+Il loro funzionamento segue, generalmente, lo schema qui riportato: un malware
+infetto esegue l'algoritmo che, a intervalli regolari, genera una 
+lista di possibili domini, a cui tenterà di connettersi per ricevere istruzioni. 
+Il server C2, a sua volta, registrerà anticipatamente uno dei domini generati, 
+permettendo così la comunicazione tra l'attaccante e il sistema compromesso. 
+\\\\
+Questi algoritmi sfruttano funzioni deterministiche o pseudo-casuali 
+per generare (in maniera prevedibile) un insieme di domini che cambiano
+nel tempo, a partire da uno specifico \textit{seed} (come una data, una chiave segreta o un valore 
+ottenuto da una risorsa pubblica).Quando un dominio viene bloccato 
+dalle misure di sicurezza della rete, l'algoritmo continua a generare 
+nuovi indirizzi, rendendo il rilevamento e la mitigazione estremamente 
+complesse.
+
+\subsection*{Topologie di algoritmi}
+Gli algoritmi di generazione dei domini possono essere classificati in diverse 
+categorie, a seconda della logica impiegata per la creazione dei nomi. 
+\\\\
+Gli algoritmi \textbf{basati su dizionario} combinano parole predefinite per 
+generare nomi di dominio che risultano piuttosto realistici, e perciò 
+difficili da distinguere da quelli legittimi. Questi algoritmi offrono
+quindi il vantaggio di generare domini apparentemente naturali, ma la
+loro efficacia dipende dalla dimensione e dalla varietà del dizionario utilizzato. 
+\\\\
+Un'altra tipologia comune di DGA è rappresentata dagli algoritmi \textbf{pseudo-casuali}, 
+che generano domini(spesso stringhe alfanumeriche casuali), basandosi su 
+un \textit{seed} (generalmente temporale) per ottenere risultati 
+riproducibili. Sebbene questi domini possano variare dinamicamente, 
+la loro natura casuale li rende più facili da 
+rilevare con strumenti di analisi automatica.
+\\\\
+Alcuni algoritmi, più sofisticati, adottano \textbf{modelli statistici}
+per creare domini che imitano quelli reali. Questi metodi utilizzano 
+spesso modelli Markoviani o altre tecniche di apprendimento statistico 
+per produrre nomi che sembrano naturali, aumentando così la difficoltà 
+di rilevamento. 
+\\\\
+Gli approcci più avanzati si basano invece su tecniche di 
+\textbf{apprendimento automatico} e reti neurali per generare 
+domini che si adattano dinamicamente ai protocolli di 
+sicurezza, risultando quindi in sistemi sempre più difficili da individuare. 
+Sebbene questa soluzione offra un elevato livello di
+resistenza alle misure di sicurezza, la sua implementazione spesso complessa, oltre a 
+richiedere maggiori risorse computazionali.

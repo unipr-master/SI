@@ -1,3 +1,5 @@
+## 5. Network Forensic
+
 La **scienza forense** si occupa dell’applicazione di metodi scientifici per supportare indagini in ambito sia criminale che civile. Con l’evoluzione tecnologica, questo campo si è ampliato, includendo discipline specializzate che analizzano diverse tipologie di evidenze, come l’esame delle impronte digitali, le analisi tossicologiche e molti altri ambiti.
 
 Tra queste, l’**analisi forense digitale** è una branca specifica della scienza forense che si focalizza sull’individuazione, raccolta, analisi e conservazione di prove presenti su dispositivi digitali, come computer, smartphone o hard disk.
